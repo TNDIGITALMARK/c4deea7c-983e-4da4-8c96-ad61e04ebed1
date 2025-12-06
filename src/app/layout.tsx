@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Poppins, Open_Sans, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { QueryProvider } from "@/components/query-provider";
@@ -8,22 +8,29 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-// Elegant serif font for headings
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+// Poppins for headings
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+// Open Sans for body text
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+});
+
+// Dancing Script for accent text
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing-script",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-// Clean sans-serif for body text
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Sterling Oaks Golf Club | Championship Golf Experience",
-  description: "Experience championship golf on three award-winning courses designed by Robert Trent Jones II. Premium memberships, events, and world-class amenities.",
+  title: "Lily Suda | Lifestyle, Parenting & Wellness Expert",
+  description: "Join Lily Suda for authentic parenting tips, luxury wellness advice, and lifestyle inspiration. Explore the blog, listen to the podcast, and join our community of mindful parents.",
 };
 
 export default function RootLayout({
@@ -37,7 +44,7 @@ export default function RootLayout({
 
       </head>
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased font-sans`}
+        className={`${poppins.variable} ${openSans.variable} ${dancingScript.variable} antialiased font-sans`}
       >
         <QueryProvider>
           <ZyloProvider>
