@@ -198,8 +198,17 @@ All colors in HSL format
 
 * {
   box-sizing: border-box;
+}
+
+/* Reset margins and padding only on specific elements that need it */
+body, h1, h2, h3, h4, h5, h6, ul, ol, li, figure, figcaption, blockquote, dl, dd {
   margin: 0;
+}
+
+/* Preserve natural padding on interactive and form elements */
+ul, ol {
   padding: 0;
+  list-style: none;
 }
 
 html {
