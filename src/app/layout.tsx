@@ -41,18 +41,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-
-      
-        {}
-      
-        {}
-      
-        {}
-      
-        {}
-      
-        {}
-      
         {/* PHOENIX_EDITOR_INJECTION_START */}
         {(process.env.NODE_ENV === 'development' ||
           process.env.NEXT_PUBLIC_ENABLE_PHOENIX_EDITOR === 'true') && (
