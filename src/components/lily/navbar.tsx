@@ -16,12 +16,12 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <nav className="sticky top-0 z-50 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <h1 className="text-2xl font-accent font-bold text-primary">
+          <Link href="/" className="flex items-center group">
+            <h1 className="text-2xl font-accent font-bold text-primary group-hover:scale-105 transition-transform duration-300">
               Lily Suda
             </h1>
           </Link>
@@ -32,9 +32,10 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-foreground font-heading font-medium hover:text-primary transition-colors"
+                className="relative text-foreground font-heading font-medium hover:text-primary transition-colors duration-300 group py-2"
               >
                 {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </div>
@@ -42,7 +43,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary"
+            className="md:hidden p-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -50,14 +51,14 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 animate-fade-in">
-            <div className="flex flex-col gap-4">
+          <div className="md:hidden pb-4 animate-fade-in border-t border-border/30 mt-2 pt-4">
+            <div className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-foreground font-heading font-medium hover:text-primary transition-colors py-2"
+                  className="text-foreground font-heading font-medium hover:text-primary hover:bg-primary/10 transition-all duration-300 py-3 px-4 rounded-lg"
                 >
                   {item.label}
                 </Link>
