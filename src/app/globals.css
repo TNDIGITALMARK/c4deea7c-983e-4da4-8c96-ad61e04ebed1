@@ -119,38 +119,50 @@ All colors in HSL format
 }
 
 @theme {
-  --container: 1400px;
-  --container-center: true;
-  --container-padding: 2rem;
-  
+  /* Spacing System - Comprehensive spacing utilities */
+  --spacing-xs: 0.5rem;      /* 8px */
+  --spacing-sm: 0.75rem;     /* 12px */
+  --spacing-md: 1rem;        /* 16px */
+  --spacing-lg: 1.5rem;      /* 24px */
+  --spacing-xl: 2rem;        /* 32px */
+  --spacing-2xl: 3rem;       /* 48px */
+  --spacing-3xl: 4rem;       /* 64px */
+
+  /* Container System */
+  --container-max-width: 1400px;
+  --container-padding-mobile: 1rem;    /* 16px on mobile */
+  --container-padding-tablet: 1.5rem;  /* 24px on tablet */
+  --container-padding-desktop: 2rem;   /* 32px on desktop */
+  --container-padding-wide: 3rem;      /* 48px on wide screens */
+
   /* Color System */
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-  
+
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-  
+
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
-  
+
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
-  
+
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
-  
+
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
-  
+
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
-  
+
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
-  
+
   --color-sidebar: hsl(var(--sidebar-background));
   --color-sidebar-foreground: hsl(var(--sidebar-foreground));
   --color-sidebar-primary: hsl(var(--sidebar-primary));
@@ -159,12 +171,12 @@ All colors in HSL format
   --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
-  
+
   /* Border Radius */
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
-  
+
   /* Animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -731,4 +743,462 @@ img {
   right: -12px;
   z-index: 10;
   animation: float 3s ease-in-out infinite;
+}
+
+/* ============================================
+   SPACING & LAYOUT SYSTEM - CRITICAL FIX
+   ============================================ */
+
+/* Override Tailwind's container with proper responsive padding */
+@layer base {
+  .container {
+    width: 100% !important;
+    max-width: var(--container-max-width) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: var(--container-padding-mobile) !important;
+    padding-right: var(--container-padding-mobile) !important;
+  }
+
+  /* Responsive container padding */
+  @media (min-width: 640px) {
+    .container {
+      padding-left: var(--container-padding-tablet) !important;
+      padding-right: var(--container-padding-tablet) !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: var(--container-padding-desktop) !important;
+      padding-right: var(--container-padding-desktop) !important;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      padding-left: var(--container-padding-wide) !important;
+      padding-right: var(--container-padding-wide) !important;
+    }
+  }
+}
+
+/* Section spacing utilities */
+.section-spacing {
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+}
+
+@media (max-width: 768px) {
+  .section-spacing {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+}
+
+/* Content spacing utilities */
+.content-spacing > * + * {
+  margin-top: var(--spacing-lg);
+}
+
+.content-spacing-sm > * + * {
+  margin-top: var(--spacing-sm);
+}
+
+.content-spacing-xl > * + * {
+  margin-top: var(--spacing-xl);
+}
+
+/* Button spacing fixes - Ensure buttons have proper internal padding */
+@layer base {
+  button {
+    margin: 0;
+    /* Ensure minimum interactive size for accessibility */
+    min-height: 2.5rem;
+  }
+
+  /* Ensure buttons in links don't collapse */
+  a > button {
+    display: inline-flex;
+  }
+
+  /* Ensure buttons and interactive elements have proper spacing in flex/grid containers */
+  .flex > button,
+  .flex > a,
+  .flex > div > button {
+    flex-shrink: 0;
+  }
+
+  .grid > button,
+  .grid > a,
+  .grid > div > button {
+    justify-self: start;
+  }
+
+  /* Form elements need consistent spacing */
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea,
+  select {
+    min-height: 2.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* Card spacing improvements */
+.card-spacing {
+  padding: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  .card-spacing {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* Grid gap utilities that respect spacing system */
+.grid-gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.grid-gap-md {
+  gap: var(--spacing-md);
+}
+
+.grid-gap-lg {
+  gap: var(--spacing-lg);
+}
+
+.grid-gap-xl {
+  gap: var(--spacing-xl);
+}
+
+/* Flex gap utilities */
+.flex-gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.flex-gap-md {
+  gap: var(--spacing-md);
+}
+
+.flex-gap-lg {
+  gap: var(--spacing-lg);
+}
+
+.flex-gap-xl {
+  gap: var(--spacing-xl);
+}
+
+/* Page wrapper to ensure consistent spacing */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+}
+
+/* Responsive padding utilities */
+.px-page {
+  padding-left: var(--container-padding-mobile);
+  padding-right: var(--container-padding-mobile);
+}
+
+@media (min-width: 640px) {
+  .px-page {
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .px-page {
+    padding-left: var(--container-padding-desktop);
+    padding-right: var(--container-padding-desktop);
+  }
+}
+
+@media (min-width: 1536px) {
+  .px-page {
+    padding-left: var(--container-padding-wide);
+    padding-right: var(--container-padding-wide);
+  }
+}
+
+/* Vertical spacing utilities */
+.py-section {
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+}
+
+@media (max-width: 768px) {
+  .py-section {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+}
+
+.py-section-sm {
+  padding-top: var(--spacing-2xl);
+  padding-bottom: var(--spacing-2xl);
+}
+
+@media (max-width: 768px) {
+  .py-section-sm {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+}
+
+/* Margin utilities for components */
+.mb-section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.mb-content {
+  margin-bottom: var(--spacing-xl);
+}
+
+.mb-tight {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Stack layout for consistent vertical spacing */
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack > * + * {
+  margin-top: var(--spacing-lg);
+}
+
+.stack-sm > * + * {
+  margin-top: var(--spacing-sm);
+}
+
+.stack-xl > * + * {
+  margin-top: var(--spacing-xl);
+}
+
+/* Inline layout for consistent horizontal spacing */
+.inline-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.inline-stack-sm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.inline-stack-lg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+/* ============================================
+   PAGE LAYOUT FIXES - COMPREHENSIVE
+   ============================================ */
+
+/* Ensure all sections have minimum spacing */
+@layer base {
+  section {
+    position: relative;
+  }
+
+  /* Give sections breathing room by default */
+  section + section {
+    margin-top: 0;
+  }
+
+  /* Ensure main content area has proper structure */
+  main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 80px); /* Account for header */
+  }
+
+  /* Ensure proper spacing for direct children of sections */
+  section > .container,
+  section > div:not([class*="absolute"]):not([class*="fixed"]) {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Flex and Grid Gap Improvements */
+@layer utilities {
+  /* Standard gap utilities using spacing system */
+  .gap-page {
+    gap: var(--spacing-xl);
+  }
+
+  .gap-section {
+    gap: var(--spacing-2xl);
+  }
+
+  .gap-content {
+    gap: var(--spacing-lg);
+  }
+
+  .gap-tight {
+    gap: var(--spacing-sm);
+  }
+
+  /* Column gap utilities */
+  .column-gap-page {
+    column-gap: var(--spacing-xl);
+  }
+
+  .column-gap-section {
+    column-gap: var(--spacing-2xl);
+  }
+
+  .column-gap-content {
+    column-gap: var(--spacing-lg);
+  }
+
+  /* Row gap utilities */
+  .row-gap-page {
+    row-gap: var(--spacing-xl);
+  }
+
+  .row-gap-section {
+    row-gap: var(--spacing-2xl);
+  }
+
+  .row-gap-content {
+    row-gap: var(--spacing-lg);
+  }
+}
+
+/* ============================================
+   RESPONSIVE SPACING OVERRIDES
+   ============================================ */
+
+/* Ensure mobile devices have proper minimum spacing */
+@media (max-width: 640px) {
+  @layer base {
+    /* Reduce font size slightly on mobile to give more room */
+    body {
+      font-size: 0.9375rem; /* 15px */
+    }
+
+    /* Ensure buttons are large enough on mobile */
+    button {
+      min-height: 44px; /* iOS recommended touch target */
+    }
+
+    /* Cards need less padding on mobile */
+    .card-spacing,
+    [class*="card"] > div:first-child {
+      padding: var(--spacing-lg);
+    }
+  }
+}
+
+/* ============================================
+   COMPONENT-SPECIFIC SPACING FIXES
+   ============================================ */
+
+/* Cards in grids should have consistent internal spacing */
+@layer components {
+  .card,
+  [class*="card"] {
+    padding: var(--spacing-xl);
+  }
+
+  @media (max-width: 768px) {
+    .card,
+    [class*="card"] {
+      padding: var(--spacing-lg);
+    }
+  }
+
+  /* Ensure navbar and footer have proper internal spacing */
+  nav .container,
+  header .container,
+  footer .container {
+    padding-left: var(--container-padding-mobile) !important;
+    padding-right: var(--container-padding-mobile) !important;
+  }
+
+  @media (min-width: 640px) {
+    nav .container,
+    header .container,
+    footer .container {
+      padding-left: var(--container-padding-tablet) !important;
+      padding-right: var(--container-padding-tablet) !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    nav .container,
+    header .container,
+    footer .container {
+      padding-left: var(--container-padding-desktop) !important;
+      padding-right: var(--container-padding-desktop) !important;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    nav .container,
+    header .container,
+    footer .container {
+      padding-left: var(--container-padding-wide) !important;
+      padding-right: var(--container-padding-wide) !important;
+    }
+  }
+}
+
+/* ============================================
+   EDGE CASE FIXES
+   ============================================ */
+
+/* Prevent content from touching screen edges */
+@layer base {
+  * {
+    /* Ensure no element can have zero padding when it should have container padding */
+    box-sizing: border-box;
+  }
+
+  /* Fix for full-width sections that shouldn't touch edges */
+  section.full-width > *:not(.absolute):not(.fixed) {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+
+  @media (min-width: 640px) {
+    section.full-width > *:not(.absolute):not(.fixed) {
+      padding-left: var(--container-padding-tablet);
+      padding-right: var(--container-padding-tablet);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    section.full-width > *:not(.absolute):not(.fixed) {
+      padding-left: var(--container-padding-desktop);
+      padding-right: var(--container-padding-desktop);
+    }
+  }
+}
+
+/* Ensure grid items don't overflow */
+@layer utilities {
+  .grid-item-safe {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .flex-item-safe {
+    min-width: 0;
+    flex-shrink: 1;
+  }
 }
