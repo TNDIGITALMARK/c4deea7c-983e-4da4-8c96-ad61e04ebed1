@@ -5,7 +5,7 @@ import { Instagram, Youtube, Mail } from 'lucide-react';
 export function Footer() {
   return (
     <footer className="bg-gradient-to-br from-muted to-muted/80 mt-24 border-t border-border/50">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
           <div className="space-y-6">

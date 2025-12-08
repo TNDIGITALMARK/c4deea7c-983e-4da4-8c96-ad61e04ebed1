@@ -52,7 +52,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative gradient-cream overflow-hidden">
-        <div className="container mx-auto px-4 py-20 md:py-32">
+        <div className="container py-20 md:py-32">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Hero Content */}
             <div className="animate-fade-in-up">
@@ -119,7 +119,7 @@ export default function HomePage() {
 
       {/* Pet Competition Winner Announcement */}
       <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <div className="gradient-yellow rounded-3xl p-8 md:p-12 shadow-lg animate-scale-in">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
@@ -155,7 +155,7 @@ export default function HomePage() {
               className="object-cover opacity-20"
             />
           </div>
-          <div className="container mx-auto px-4 relative z-10 text-center">
+          <div className="container relative z-10 text-center">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
               Elevate Your Game at Sterling Oaks
             </h2>
@@ -174,7 +174,7 @@ export default function HomePage() {
 
         {/* Facilities Section */}
         <section className="py-20 bg-muted">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
                 World-Class Facilities
@@ -231,7 +231,7 @@ export default function HomePage() {
 
         {/* Testimonials Section */}
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
                 What Our Members Say
@@ -268,7 +268,7 @@ export default function HomePage() {
 
         {/* Stats Section */}
         <section className="py-20 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="space-y-2">
                 <div className="text-5xl md:text-6xl font-bold text-accent">30+</div>
@@ -292,7 +292,7 @@ export default function HomePage() {
 
         {/* Quick Links Section */}
         <section className="py-20 bg-muted">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Events */}
               <div className="bg-card p-8 rounded-lg border text-center hover:shadow-lg transition-all hover:-translate-y-1">

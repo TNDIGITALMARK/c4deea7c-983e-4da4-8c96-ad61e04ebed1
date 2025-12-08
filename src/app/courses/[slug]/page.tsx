@@ -115,7 +115,7 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white container mx-auto px-4">
+            <div className="text-center text-white container">
               <h1 className="text-5xl md:text-6xl font-serif font-bold mb-4">
                 {course.name}
               </h1>
@@ -132,7 +132,7 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
 
         {/* Course Stats */}
         <section className="py-12 bg-muted border-b">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto text-center">
               <div>
                 <div className="text-4xl font-bold text-primary mb-2">{course.parTotal}</div>
@@ -152,7 +152,7 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
 
         {/* Course Description */}
         <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 max-w-4xl">
+          <div className="container max-w-4xl">
             <h2 className="text-3xl font-serif font-bold mb-6">About This Course</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               {course.description}
@@ -198,7 +198,7 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
         {/* Scorecard */}
         {course.holes && course.holes.length > 0 && (
           <section className="py-16 bg-muted">
-            <div className="container mx-auto px-4">
+            <div className="container">
               <h2 className="text-3xl font-serif font-bold mb-8 text-center">Scorecard</h2>
               <div className="overflow-x-auto">
                 <table className="w-full bg-card rounded-lg border">
@@ -230,7 +230,7 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
 
         {/* CTA */}
         <section className="py-16 bg-primary text-primary-foreground text-center">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <h2 className="text-3xl font-serif font-bold mb-6">
               Ready to Play {course.name}?
             </h2>

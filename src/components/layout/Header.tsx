@@ -23,7 +23,7 @@ export function Header() {
 
       {/* Info bar */}
       <div className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <div className="flex items-center justify-end h-10 text-sm">
             <div className="flex items-center gap-6">
               <a href="tel:555-867-5100" className="flex items-center gap-2 hover:text-accent transition-colors">
@@ -43,7 +43,7 @@ export function Header() {
 
       {/* Main header */}
       <header className="bg-background border-b sticky top-0 z-50 backdrop-blur-sm bg-background/95">
-        <nav className="container mx-auto px-4">
+        <nav className="container">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex flex-col items-center">
@@ -95,7 +95,7 @@ export function Header() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden border-t bg-background">
-            <div className="container mx-auto px-4 py-4 space-y-3">
+            <div className="container py-4 space-y-3">
               {navigation.map((item) => (
                 <Link
                   key={item.name}

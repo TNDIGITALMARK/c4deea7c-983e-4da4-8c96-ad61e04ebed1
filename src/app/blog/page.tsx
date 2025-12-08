@@ -118,7 +118,7 @@ export default function BlogPage() {
 
       {/* Hero Section */}
       <section className="gradient-cream py-16 md:py-24">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
               The Blog
@@ -145,7 +145,7 @@ export default function BlogPage() {
 
       {/* Category Filter */}
       <section className="py-8 bg-background sticky top-20 z-40 border-b border-border">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
               <CategoryTag
@@ -162,7 +162,7 @@ export default function BlogPage() {
 
       {/* Blog Posts Grid */}
       <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container">
           {filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post, index) => (

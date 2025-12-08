@@ -76,7 +76,7 @@ export default function MembershipPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary" />
           </div>
-          <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="container text-center relative z-10">
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-accent/90 backdrop-blur-sm rounded-full text-accent-foreground text-sm font-semibold">
               <Star className="h-4 w-4" />
               EXCLUSIVE MEMBERSHIP
@@ -94,7 +94,7 @@ export default function MembershipPage() {
 
         {/* Membership Tiers */}
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
                 Choose Your Membership Level
@@ -158,7 +158,7 @@ export default function MembershipPage() {
 
         {/* Additional Benefits */}
         <section className="py-20 bg-muted">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-serif font-bold mb-8 text-center">
                 Member Benefits & Privileges
@@ -199,7 +199,7 @@ export default function MembershipPage() {
 
         {/* CTA */}
         <section className="py-20 bg-primary text-primary-foreground text-center">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
               Ready to Join Sterling Oaks?
             </h2>

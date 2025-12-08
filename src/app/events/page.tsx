@@ -88,7 +88,7 @@ export default function EventsPage() {
       <main>
         {/* Hero */}
         <section className="py-20 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
               Events & Tournaments
             </h1>
@@ -101,7 +101,7 @@ export default function EventsPage() {
 
         {/* Events List */}
         <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 max-w-5xl">
+          <div className="container max-w-5xl">
             <div className="space-y-8">
               {events.map((event) => (
                 <div
@@ -168,7 +168,7 @@ export default function EventsPage() {
 
         {/* CTA */}
         <section className="py-16 bg-muted text-center">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <h2 className="text-3xl font-serif font-bold mb-6">
               Stay Updated on Upcoming Events
             </h2>

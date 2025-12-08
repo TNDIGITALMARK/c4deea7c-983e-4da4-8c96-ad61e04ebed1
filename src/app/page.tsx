@@ -58,7 +58,7 @@ export default function HomePage() {
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
         </div>
 
-        <div className="container mx-auto px-4 py-24 md:py-36 relative z-10">
+        <div className="container py-24 md:py-36 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Hero Content */}
             <div className="animate-fade-in-up space-y-6">
@@ -129,7 +129,7 @@ export default function HomePage() {
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" />
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container relative z-10">
           <div className="gradient-yellow rounded-3xl p-8 md:p-12 shadow-2xl animate-scale-in border border-secondary/20 relative overflow-hidden group">
             {/* Subtle shine effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
@@ -163,7 +163,7 @@ export default function HomePage() {
         {/* Decorative background gradient */}
         <div className="absolute left-0 top-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container relative z-10">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
               <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-heading font-medium border border-primary/20">
@@ -204,7 +204,7 @@ export default function HomePage() {
         {/* Decorative elements */}
         <div className="absolute right-0 top-1/3 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container relative z-10">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-primary/15 backdrop-blur-sm rounded-full mb-6 border border-primary/20 shadow-sm">
@@ -265,7 +265,7 @@ export default function HomePage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-pink rounded-full mb-8 shadow-xl animate-pulse-glow">
               <Heart size={40} className="text-foreground" />

@@ -12,7 +12,7 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <section className="gradient-cream py-20 md:py-32">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1 animate-fade-in-up">
@@ -59,7 +59,7 @@ export default function AboutPage() {
 
       {/* My Story */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-8 text-center">
               My Story
@@ -90,7 +90,7 @@ export default function AboutPage() {
 
       {/* What I Offer */}
       <section className="py-20 gradient-cream">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-12 text-center">
               What You&apos;ll Find Here
@@ -141,7 +141,7 @@ export default function AboutPage() {
 
       {/* Call to Action */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
               Let&apos;s Connect!

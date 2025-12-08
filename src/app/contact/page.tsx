@@ -70,7 +70,7 @@ export default function ContactPage() {
       <main>
         {/* Hero */}
         <section className="py-20 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
               Contact Us
             </h1>
@@ -83,7 +83,7 @@ export default function ContactPage() {
 
         {/* Contact Form & Info */}
         <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 max-w-6xl">
+          <div className="container max-w-6xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div>
@@ -276,7 +276,7 @@ export default function ContactPage() {
 
         {/* Office Hours */}
         <section className="py-16 bg-muted">
-          <div className="container mx-auto px-4 max-w-4xl">
+          <div className="container max-w-4xl">
             <h2 className="text-3xl font-serif font-bold mb-8 text-center">Office Hours</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-card p-6 rounded-lg border text-center">

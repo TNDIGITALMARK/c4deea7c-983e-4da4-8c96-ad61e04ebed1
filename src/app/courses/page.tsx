@@ -50,7 +50,7 @@ export default function CoursesPage() {
       <main>
         {/* Hero */}
         <section className="py-20 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
               Our Championship Courses
             </h1>
@@ -64,7 +64,7 @@ export default function CoursesPage() {
 
         {/* Courses Grid */}
         <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {courses.map((course) => (
                 <CourseCard key={course.id} {...course} />
@@ -75,7 +75,7 @@ export default function CoursesPage() {
 
         {/* Additional Info */}
         <section className="py-16 bg-muted">
-          <div className="container mx-auto px-4">
+          <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-serif font-bold mb-6">
                 Designed for Excellence

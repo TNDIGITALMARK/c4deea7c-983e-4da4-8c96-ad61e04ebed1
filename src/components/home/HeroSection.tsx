@@ -20,7 +20,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
+      <div className="relative z-10 container text-center text-white">
         <div className="inline-block mb-4 px-4 py-2 bg-accent/90 backdrop-blur-sm rounded-full text-accent-foreground text-sm font-semibold tracking-wide">
           ⛳ STERLING OAKS GOLF CLUB
         </div>

@@ -9,7 +9,7 @@ export default function BookTeeTimePage() {
       <Header />
       <main>
         <section className="py-20 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
               Book a Tee Time
             </h1>
@@ -20,7 +20,7 @@ export default function BookTeeTimePage() {
           </div>
         </section>
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 text-center max-w-4xl">
+          <div className="container text-center max-w-4xl">
             <h2 className="text-3xl font-serif font-bold mb-6">Online Booking Coming Soon</h2>
             <p className="text-muted-foreground mb-8">
               Our online tee time booking system is currently being developed. In the meantime, please call us at <a href="tel:555-867-5100" className="text-primary font-semibold">(555) 867-5100</a> to reserve your tee time.

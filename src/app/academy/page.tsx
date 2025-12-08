@@ -9,7 +9,7 @@ export default function AcademyPage() {
       <Header />
       <main>
         <section className="py-20 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
               Golf Academy
             </h1>
@@ -20,7 +20,7 @@ export default function AcademyPage() {
           </div>
         </section>
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 text-center max-w-4xl">
+          <div className="container text-center max-w-4xl">
             <h2 className="text-3xl font-serif font-bold mb-6">Coming Soon</h2>
             <p className="text-muted-foreground mb-8">
               Our comprehensive golf academy program is currently under development. Check back soon for details on lessons, clinics, and training programs.
